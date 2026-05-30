@@ -18,7 +18,15 @@ export type BadgeName =
   | "Toprak Yönetimi Uzmanı"
   | "Dirlik Sistemi Ustası"
   | "Çifthane Bilgesi"
-  | "Askeri ve Toprak KPSS Avcısı";
+  | "Askeri ve Toprak KPSS Avcısı"
+  | "Sıbyan Talebesi"
+  | "Medrese Âlimi"
+  | "Sahn-ı Seman Uzmanı"
+  | "İhtisas Medresesi Bilgesi"
+  | "Akademik Basamak Ustası"
+  | "Bilim İnsanları Hafızı"
+  | "Eser Avcısı"
+  | "Eğitim ve Bilim KPSS Uzmanı";
 
 export type ChapterId =
   | "foundations"
@@ -49,6 +57,16 @@ export type ChapterId =
   | "miri-land"
   | "dirlik-system"
   | "military-land-traps"
+  | "education-system"
+  | "formal-education"
+  | "palace-education"
+  | "military-education"
+  | "madrasas"
+  | "madrasas-decline"
+  | "specialized-madrasas"
+  | "academic-career"
+  | "scientists"
+  | "education-science-traps"
   | "mistakes";
 
 export type PlayableChapterId = Exclude<ChapterId, "mistakes">;
