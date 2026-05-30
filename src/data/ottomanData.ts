@@ -10,6 +10,11 @@ import type {
   TimelineEvent,
   TrueFalseActivity,
 } from "../types";
+import {
+  militaryLandActivities,
+  militaryLandBadges,
+  militaryLandChapters,
+} from "./militaryLandData";
 
 export const chapterDefinitions: ChapterDefinition[] = [
   {
@@ -148,6 +153,7 @@ export const chapterDefinitions: ChapterDefinition[] = [
     badge: "Hukuk ve Sosyal Hayat Uzmanı",
     tone: "border-red-500/40 bg-red-500/10 text-red-100",
   },
+  ...militaryLandChapters,
   {
     id: "traps",
     title: "KPSS Tuzakları",
@@ -1632,6 +1638,7 @@ export const activities: Record<PlayableChapterId, Activity> = {
   "social-institutions": socialInstitutionsActivity,
   "administrator-groups": administratorGroupsActivity,
   "law-social-traps": lawSocialTrapsActivity,
+  ...militaryLandActivities,
   traps: trapsActivity,
 };
 
@@ -1648,6 +1655,7 @@ export const badges = [
   "Sosyal Kurum Hafızı",
   "Seyfiye-İlmiye-Kalemiye Ustası",
   "Hukuk ve Sosyal Hayat Uzmanı",
+  ...militaryLandBadges,
 ] as const;
 
 export function stableShuffle<T>(items: T[], seed: string): T[] {

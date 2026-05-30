@@ -10,7 +10,15 @@ export type BadgeName =
   | "Vakıf Kurucusu"
   | "Sosyal Kurum Hafızı"
   | "Seyfiye-İlmiye-Kalemiye Ustası"
-  | "Hukuk ve Sosyal Hayat Uzmanı";
+  | "Hukuk ve Sosyal Hayat Uzmanı"
+  | "Yeniçeri Adayı"
+  | "Kapıkulu Uzmanı"
+  | "Eyalet Askerleri Bilgesi"
+  | "Donanma Reisi"
+  | "Toprak Yönetimi Uzmanı"
+  | "Dirlik Sistemi Ustası"
+  | "Çifthane Bilgesi"
+  | "Askeri ve Toprak KPSS Avcısı";
 
 export type ChapterId =
   | "foundations"
@@ -31,6 +39,16 @@ export type ChapterId =
   | "social-institutions"
   | "administrator-groups"
   | "law-social-traps"
+  | "ottoman-army"
+  | "kapikulu-infantry"
+  | "kapikulu-cavalry"
+  | "provincial-soldiers"
+  | "naval-forces"
+  | "army-features"
+  | "land-types"
+  | "miri-land"
+  | "dirlik-system"
+  | "military-land-traps"
   | "mistakes";
 
 export type PlayableChapterId = Exclude<ChapterId, "mistakes">;
