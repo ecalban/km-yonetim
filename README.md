@@ -2,6 +2,14 @@
 
 React + Vite + TypeScript ile hazırlanmış, tamamen tarayıcıda çalışan KPSS Osmanlı Kültür ve Medeniyeti öğrenme oyunu.
 
+## İçerik
+
+- Osmanlı devlet yönetimi, merkez ve taşra teşkilatı
+- Hukuk sistemi, mahkemeler ve kadıların görevleri
+- Millet Sistemi, Hakkaniyet Çemberi ve vakıf teşkilatı
+- Sosyal kurumlar ve Seyfiye-İlmiye-Kalemiye yönetici grupları
+- KPSS tuzakları ve yanlış yapılan soruları tekrar ettiren Yanlışlarım modu
+
 ## Kurulum
 
 ```bash

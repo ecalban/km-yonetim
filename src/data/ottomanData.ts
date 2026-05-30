@@ -77,6 +77,78 @@ export const chapterDefinitions: ChapterDefinition[] = [
     tone: "border-cyan-500/40 bg-cyan-500/10 text-cyan-100",
   },
   {
+    id: "law-system",
+    title: "Hukuk Sistemi",
+    subtitle: "Hukukun kaynakları ve Medeni Kanun",
+    mode: "matching",
+    badge: "Hukuk ve Sosyal Hayat Uzmanı",
+    tone: "border-emerald-500/40 bg-emerald-500/10 text-emerald-100",
+  },
+  {
+    id: "courts",
+    title: "Mahkemeler",
+    subtitle: "Dava dosyasını doğru mahkemeye yönlendir",
+    mode: "classification",
+    badge: "Mahkeme Uzmanı",
+    tone: "border-indigo-500/40 bg-indigo-500/10 text-indigo-100",
+  },
+  {
+    id: "qadi-duties",
+    title: "Kadıların Görevleri",
+    subtitle: "Kadı görevleri ve atama bilgileri",
+    mode: "truefalse",
+    badge: "Kadı Adayı",
+    tone: "border-yellow-500/40 bg-yellow-500/10 text-yellow-100",
+  },
+  {
+    id: "millet-system",
+    title: "Millet Sistemi",
+    subtitle: "Toplum düzeni, Surname ve Surre Alayları",
+    mode: "matching",
+    badge: "Hukuk ve Sosyal Hayat Uzmanı",
+    tone: "border-pink-500/40 bg-pink-500/10 text-pink-100",
+  },
+  {
+    id: "equity-circle",
+    title: "Hakkaniyet Çemberi",
+    subtitle: "Adalet, kanun, ordu ve padişah sırası",
+    mode: "timeline",
+    badge: "Hakkaniyet Bilgesi",
+    tone: "border-violet-500/40 bg-violet-500/10 text-violet-100",
+  },
+  {
+    id: "waqf",
+    title: "Vakıf Teşkilatı",
+    subtitle: "Vakıf, avarız, mevkuf ve sıyga",
+    mode: "matching",
+    badge: "Vakıf Kurucusu",
+    tone: "border-green-500/40 bg-green-500/10 text-green-100",
+  },
+  {
+    id: "social-institutions",
+    title: "Sosyal Kurumlar",
+    subtitle: "Kurumları görevleriyle eşleştir",
+    mode: "matching",
+    badge: "Sosyal Kurum Hafızı",
+    tone: "border-blue-500/40 bg-blue-500/10 text-blue-100",
+  },
+  {
+    id: "administrator-groups",
+    title: "Yönetici Grupları",
+    subtitle: "Seyfiye, İlmiye ve Kalemiye",
+    mode: "classification",
+    badge: "Seyfiye-İlmiye-Kalemiye Ustası",
+    tone: "border-stone-400/40 bg-stone-400/10 text-stone-100",
+  },
+  {
+    id: "law-social-traps",
+    title: "Hukuk ve Sosyal Hayat KPSS Tuzakları",
+    subtitle: "Hukuk, vakıf, kurum ve sınıf tuzakları",
+    mode: "truefalse",
+    badge: "Hukuk ve Sosyal Hayat Uzmanı",
+    tone: "border-red-500/40 bg-red-500/10 text-red-100",
+  },
+  {
     id: "traps",
     title: "KPSS Tuzakları",
     subtitle: "Kritik doğru-yanlış bilgileri",
@@ -927,6 +999,621 @@ const trapsActivity: TrueFalseActivity = {
   ],
 };
 
+const lawSystemActivity: MatchingActivity = {
+  id: "activity-law-system",
+  chapterId: "law-system",
+  mode: "matching",
+  title: "Hukuk Kavramları",
+  description: "Osmanlı hukuk sisteminin kaynaklarını ve kapanış bilgisini eşleştir.",
+  pairs: [
+    {
+      id: "law-source-conquered",
+      left: "Fethedilen bölgelerdeki uygulamalar",
+      right: "Osmanlı hukuk sisteminin oluşmasında etkili olan kaynaklardan biri",
+      explanation: "Notta fethedilen bölgelerdeki uygulamaların Osmanlı hukuk sistemini etkilediği belirtilir.",
+    },
+    {
+      id: "law-source-islam",
+      left: "İslam'ın getirdiği esaslar",
+      right: "Osmanlı hukuk sisteminin oluşmasında etkili olan dini esaslar",
+      explanation: "Osmanlı hukuk sisteminin oluşmasında İslam'ın getirdiği esaslar etkili olmuştur.",
+    },
+    {
+      id: "law-source-orta-asya",
+      left: "Orta Asya Türk gelenekleri",
+      right: "Örfi hukukla ilişkilendirilen hukuk kaynağı",
+      explanation: "Notta Orta Asya Türk gelenekleri örfi hukuk bilgisiyle birlikte verilmiştir.",
+    },
+    {
+      id: "law-civil-code",
+      left: "17 Şubat 1926 Medeni Kanun",
+      right: "Osmanlı Devleti'ne ait tüm mahkemelerin kaldırıldığı kanun",
+      explanation: "Notta Osmanlı Devleti'ne ait tüm mahkemelerin 17 Şubat 1926'da çıkan Medeni Kanun ile kaldırıldığı yazılıdır.",
+    },
+  ],
+};
+
+const courtsActivity: ClassificationActivity = {
+  id: "activity-courts",
+  chapterId: "courts",
+  mode: "classification",
+  title: "Mahkeme Yönlendirme Oyunu",
+  description: "Dava dosyasını nottaki doğru mahkeme türüne yönlendir.",
+  categories: [
+    {
+      id: "pre-seri",
+      title: "Tanzimat Öncesi Şeri Mahkemeler",
+      description: "Müslüman halk arasındaki anlaşmazlıklar ve Müslümanlara ait miras konuları.",
+    },
+    {
+      id: "pre-cemaat",
+      title: "Tanzimat Öncesi Cemaat Mahkemeleri",
+      description: "Gayrimüslimlerin mezhep yönünden bağlı oldukları mahkemeler.",
+    },
+    {
+      id: "pre-konsolosluk",
+      title: "Tanzimat Öncesi Konsolosluk Mahkemeleri",
+      description: "Kapitülasyon verilen devletlerin kendi aralarındaki sorunları.",
+    },
+    {
+      id: "post-seri",
+      title: "Tanzimat Sonrası Şeri Mahkemeler",
+      description: "Nikah, boşanma ve miras gibi konularla sınırlandırılan görevler.",
+    },
+    {
+      id: "post-cemaat",
+      title: "Tanzimat Sonrası Cemaat Mahkemeleri",
+      description: "1875 fermanıyla gayrimüslimlerin kendi anlaşmazlıkları.",
+    },
+    {
+      id: "post-konsolosluk",
+      title: "Tanzimat Sonrası Konsolosluk Mahkemeleri",
+      description: "Tanzimat'tan önceki görevleri devam eden konsolosluk mahkemeleri.",
+    },
+    {
+      id: "ticaret",
+      title: "Ticaret Mahkemeleri",
+      description: "Her türlü ticari dava.",
+    },
+    {
+      id: "nizamiye",
+      title: "Nizamiye Mahkemeleri",
+      description: "Ticaret mahkemeleri dışında kalan hukuk ve cinayet davaları.",
+    },
+  ],
+  items: [
+    {
+      id: "court-muslim-conflict",
+      label: "Müslüman halk arasında çıkan anlaşmazlık",
+      categoryId: "pre-seri",
+      explanation: "Tanzimat öncesi şeri mahkemeler Müslüman halk arasında çıkan anlaşmazlıklara bakmıştır.",
+    },
+    {
+      id: "court-muslim-inheritance",
+      label: "Müslümanlara ait miras davası",
+      categoryId: "pre-seri",
+      explanation: "Tanzimat öncesi şeri mahkemeler Müslümanlara ait miras gibi konulara bakmıştır.",
+    },
+    {
+      id: "court-nonmuslim-sect",
+      label: "Gayrimüslimlerin mezhep yönünden bağlı olduğu mahkeme",
+      categoryId: "pre-cemaat",
+      explanation: "Cemaat mahkemeleri gayrimüslimlerin mezhep yönünden bağlı oldukları mahkemelerdir.",
+    },
+    {
+      id: "court-nonmuslim-family",
+      label: "Gayrimüslimlerin evlenme, boşanma ve miras davaları",
+      categoryId: "pre-cemaat",
+      explanation: "Cemaat mahkemeleri daha çok evlenme, boşanma ve miras hukuku gibi davalara bakmıştır.",
+    },
+    {
+      id: "court-capitulation",
+      label: "Kapitülasyon verilen devletlerin kendi aralarındaki sorunları",
+      categoryId: "pre-konsolosluk",
+      explanation: "Konsolosluk mahkemelerinde kapitülasyon verilen devletler kendi aralarındaki sorunları çözmüştür.",
+    },
+    {
+      id: "court-post-seri-family",
+      label: "Tanzimat sonrası nikah, boşanma ve miras konuları",
+      categoryId: "post-seri",
+      explanation: "Tanzimat sonrası şeri mahkemelerin görevleri nikah, boşanma ve miras gibi konularla sınırlandırılmıştır.",
+    },
+    {
+      id: "court-post-cemaat-1875",
+      label: "1875 fermanıyla gayrimüslimlerin kendi aralarındaki anlaşmazlıkları",
+      categoryId: "post-cemaat",
+      explanation: "Tanzimat sonrası cemaat mahkemelerinde 1875 fermanıyla gayrimüslimlerin kendi anlaşmazlıklarını çözmeleri kabul edilmiştir.",
+    },
+    {
+      id: "court-post-consular-same",
+      label: "Tanzimat'tan önceki görevleri devam eden konsolosluk davaları",
+      categoryId: "post-konsolosluk",
+      explanation: "Tanzimat sonrası konsolosluk mahkemelerinin Tanzimat'tan önceki görevleri devam etmiştir.",
+    },
+    {
+      id: "court-commercial",
+      label: "Tanzimat sonrası ticari dava",
+      categoryId: "ticaret",
+      explanation: "Ticaret mahkemeleri her türlü ticari davaya bakmıştır.",
+    },
+    {
+      id: "court-nizamiye",
+      label: "Ticaret mahkemeleri dışında kalan hukuk ve cinayet davaları",
+      categoryId: "nizamiye",
+      explanation: "Nizamiye mahkemeleri ticaret mahkemeleri dışında kalan hukuk ve cinayet davalarına bakmıştır.",
+    },
+  ],
+};
+
+const qadiDutiesActivity: TrueFalseActivity = {
+  id: "activity-qadi-duties",
+  chapterId: "qadi-duties",
+  mode: "truefalse",
+  title: "Kadı Görevde Oyunu",
+  description: "Karttaki bilginin kadı görevi veya kadı atama bilgisi olup olmadığını seç.",
+  questions: [
+    {
+      id: "qadi-notary",
+      statement: "Kadı bir bölgenin noteridir.",
+      answer: true,
+      explanation: "Notta kadıların bir bölgenin noteri olduğu belirtilir.",
+    },
+    {
+      id: "qadi-marriage",
+      statement: "Kadı nikah kıymıştır.",
+      answer: true,
+      explanation: "Kadıların görevleri arasında nikah kıymak vardır.",
+    },
+    {
+      id: "qadi-two-years",
+      statement: "Kadı atandığı yerde iki yıl görev yapmıştır.",
+      answer: true,
+      explanation: "Notta kadıların atandığı yerde iki yıl görev yaptığı yazılıdır.",
+    },
+    {
+      id: "qadi-kaza-admin",
+      statement: "Kadı kazaların yöneticiliğini de yapmıştır.",
+      answer: true,
+      explanation: "Kadıların görevleri arasında kazaların yöneticiliği de verilmiştir.",
+    },
+    {
+      id: "qadi-waqf-guild",
+      statement: "Kadı vakıfları, esnafları ve loncaları denetlemiştir.",
+      answer: true,
+      explanation: "Notta kadıların vakıfları, esnafları ve loncaları denetlediği belirtilir.",
+    },
+    {
+      id: "qadi-market-price",
+      statement: "Kadı çarşı ve pazardaki ürünlerin fiyat kontrolünü yapmıştır.",
+      answer: true,
+      explanation: "Kazalarda çarşı ve pazardaki ürünlerin fiyat kontrolü kadı görevleri arasında geçer.",
+    },
+    {
+      id: "qadi-food",
+      statement: "Kadı temel gıda maddelerinin teminini sağlamıştır.",
+      answer: true,
+      explanation: "Temel gıda maddelerinin teminini sağlamak notta kadı görevi olarak verilmiştir.",
+    },
+    {
+      id: "qadi-tereke",
+      statement: "Kadı evlilikler ve miras durumlarıyla ilgili bilgileri Tereke Defteri'ne kaydetmiştir.",
+      answer: true,
+      explanation: "Notta kadıların bu bilgileri Tereke Defteri'ne kaydettiği belirtilir.",
+    },
+    {
+      id: "qadi-suhudul-hal",
+      statement: "Kadı karar vermeden önce Şuhudul Hal'e başvurmuştur.",
+      answer: true,
+      explanation: "Şuhudul Hal, bölgenin ileri gelen ve saygın kişilerinden oluşur; kadı karar vermeden önce başvurmuştur.",
+    },
+    {
+      id: "qadi-taht-appointment",
+      statement: "İstanbul, Bursa ve Edirne kadılarının atamasını padişah yapmıştır.",
+      answer: true,
+      explanation: "Taht Kadısı başlığında bu atamaların padişah tarafından yapıldığı yazılıdır.",
+    },
+    {
+      id: "qadi-taht-name",
+      statement: "İstanbul, Bursa ve Edirne kadılarına Taht Kadısı denir.",
+      answer: true,
+      explanation: "Notta Taht Kadısı başlığı İstanbul, Bursa ve Edirne kadılarıyla ilişkilidir.",
+    },
+    {
+      id: "qadi-mevleviyet-appointment",
+      statement: "İstanbul, Edirne ve Bursa dışındaki kadıların atamasını kazasker yapmıştır.",
+      answer: true,
+      explanation: "Mevleviyet Kadısı başlığında bu atamaların kazasker tarafından yapıldığı belirtilir.",
+    },
+    {
+      id: "qadi-mevleviyet-name",
+      statement: "İstanbul, Edirne ve Bursa dışındaki kadılara Mevleviyet Kadısı denir.",
+      answer: true,
+      explanation: "Notta Mevleviyet Kadısı bu şekilde açıklanmıştır.",
+    },
+    {
+      id: "qadi-only-religion",
+      statement: "Kadılar sadece dini işlere bakmıştır.",
+      answer: false,
+      explanation: "Notta kadıların noterlik, nikah, kaza yöneticiliği, denetim, fiyat kontrolü ve gıda temini gibi görevleri de verilmiştir.",
+    },
+    {
+      id: "qadi-all-sultan",
+      statement: "Osmanlı'da bütün kadıların atamasını padişah yapmıştır.",
+      answer: false,
+      explanation: "Sadece İstanbul, Bursa ve Edirne kadılarının atamasını padişah yapmıştır; diğerlerini kazasker atamıştır.",
+    },
+  ],
+};
+
+const milletSystemActivity: MatchingActivity = {
+  id: "activity-millet-system",
+  chapterId: "millet-system",
+  mode: "matching",
+  title: "Kavram Eşleştirme Oyunu",
+  description: "Sosyal hayat kavramlarını nottaki açıklamalarıyla eşleştir.",
+  pairs: [
+    {
+      id: "millet-system-definition",
+      left: "Millet Sistemi",
+      right: "Toplumun din veya mezhep esasına göre örgütlenmesi",
+      explanation: "Osmanlı toplumu din veya mezhepsel şekilde örgütlenerek yönetilmiştir; buna Millet Sistemi denir.",
+    },
+    {
+      id: "millet-surname",
+      left: "Surname",
+      right: "Düğün, şenlik, ziyafet gibi konularda yazılan eserler",
+      explanation: "Notta düğün, şenlik, ziyafet ve benzeri konularda yazılan eserlere Surname dendiği belirtilir.",
+    },
+    {
+      id: "millet-surre",
+      left: "Surre Alayları",
+      right: "Hacca gidenleri uğurlamak ve hediyeleri götürmek amacıyla düzenlenen alaylar",
+      explanation: "Surre Alayları hacca gidenleri İstanbul'dan uğurlamak ve bölge halkına hediyeler götürmek amacıyla düzenlenmiştir.",
+    },
+    {
+      id: "millet-festivity-authority",
+      left: "Şenliklerin amacı",
+      right: "Devletin otoritesini ve zenginliğini halka göstermek",
+      explanation: "Notta Osmanlı şenliklerinin devletin otoritesini ve zenginliğini halka göstermek amacıyla düzenlendiği yazılıdır.",
+    },
+    {
+      id: "millet-beraya",
+      left: "Beraya",
+      right: "Yönetici sınıf",
+      explanation: "Notta Osmanlı Devleti'nde yönetici sınıfa Beraya denildiği belirtilir.",
+    },
+    {
+      id: "millet-reaya",
+      left: "Reaya",
+      right: "Yönetilen sınıf",
+      explanation: "Notta yönetilen sınıfa Reaya denildiği belirtilir.",
+    },
+  ],
+};
+
+const equityCircleActivity: TimelineActivity = {
+  id: "activity-equity-circle",
+  chapterId: "equity-circle",
+  mode: "timeline",
+  title: "Hakkaniyet Çemberi Sıralama Oyunu",
+  description: "Hakkaniyet Çemberi halkalarını nottaki sıraya diz.",
+  questions: [
+    {
+      id: "timeline-equity-circle",
+      title: "Hakkaniyet Çemberi",
+      prompt: "Hakkaniyet Çemberi'ni doğru sıraya koy.",
+      explanation: "Notta Hakkaniyet Çemberi Adalet → Kanun → Ordu → Servet → Millet → Padişah şeklinde verilmiştir.",
+      events: [
+        {
+          id: "equity-adalet",
+          label: "Adalet",
+          detail: "Hakkaniyet Çemberi'nin ilk halkasıdır.",
+          order: 1,
+        },
+        {
+          id: "equity-kanun",
+          label: "Kanun",
+          detail: "Adalet'ten sonra gelir.",
+          order: 2,
+        },
+        {
+          id: "equity-ordu",
+          label: "Ordu",
+          detail: "Kanun'dan sonra gelir.",
+          order: 3,
+        },
+        {
+          id: "equity-servet",
+          label: "Servet",
+          detail: "Ordu'dan sonra gelir.",
+          order: 4,
+        },
+        {
+          id: "equity-millet",
+          label: "Millet",
+          detail: "Servet'ten sonra gelir.",
+          order: 5,
+        },
+        {
+          id: "equity-padisah",
+          label: "Padişah",
+          detail: "Hakkaniyet Çemberi'nin son halkasıdır.",
+          order: 6,
+        },
+      ],
+    },
+  ],
+};
+
+const waqfActivity: MatchingActivity = {
+  id: "activity-waqf",
+  chapterId: "waqf",
+  mode: "matching",
+  title: "Vakıf Teşkilatı Eşleştirmesi",
+  description: "Vakıf kavramlarını nottaki karşılıklarıyla eşleştir.",
+  pairs: [
+    {
+      id: "waqf-normal",
+      left: "Vakıf",
+      right: "Olağan vakıf",
+      explanation: "Notta Vakıf başlığının karşısında olağan bilgisi verilmiştir.",
+    },
+    {
+      id: "waqf-avariz",
+      left: "Avarız Vakıfları",
+      right: "Olağanüstü vakıf",
+      explanation: "Avarız Vakıfları notta olağanüstü vakıf olarak verilmiştir.",
+    },
+    {
+      id: "waqf-orhan",
+      left: "Orhan Bey",
+      right: "İlk vakıf teşkilatını kuran kişi",
+      explanation: "Osmanlı Devleti'nde ilk vakıf teşkilatını Orhan Bey kurmuştur.",
+    },
+    {
+      id: "waqf-mevkuf",
+      left: "Mevkuf",
+      right: "Devlete bağışlanan mal",
+      explanation: "Osmanlı'da kişinin devlete bağışladığı mala mevkuf denilmiştir.",
+    },
+    {
+      id: "waqf-siyga",
+      left: "Sıyga",
+      right: "Malın varlığını bağışlayan kişinin irade beyanı",
+      explanation: "Notta sıyga, malın varlığını bağışlayan kişinin irade beyanı olarak verilmiştir.",
+    },
+  ],
+};
+
+const socialInstitutionsActivity: MatchingActivity = {
+  id: "activity-social-institutions",
+  chapterId: "social-institutions",
+  mode: "matching",
+  title: "Sosyal Kurumlar Oyunu",
+  description: "Kurumları notta verilen görev veya karşılıklarıyla eşleştir.",
+  pairs: [
+    {
+      id: "social-darulaceze",
+      left: "Darülaceze",
+      right: "Kimsesiz çocuklar, engelliler ve muhtaç kişiler",
+      explanation: "Darülaceze'de kimsesiz çocuklar, engelliler ve muhtaç kişiler barındırılmıştır.",
+    },
+    {
+      id: "social-darussafaka",
+      left: "Darüşşafaka",
+      right: "Çocuk yurdu",
+      explanation: "Darüşşafaka notta çocuk yurdu olarak verilmiştir.",
+    },
+    {
+      id: "social-daruleytam",
+      left: "Darüleytam",
+      right: "Yetimler yurdu",
+      explanation: "Darüleytam yetimler yurdudur; notta I. Dünya Savaşı'ndan sonra öneminin arttığı da belirtilir.",
+    },
+    {
+      id: "social-darulbedayi",
+      left: "Darülbedayi",
+      right: "Tiyatro",
+      explanation: "Darülbedayi notta tiyatro olarak verilmiştir.",
+    },
+    {
+      id: "social-darulelhan",
+      left: "Darülelhan",
+      right: "Konservatuvar",
+      explanation: "Darülelhan notta konservatuvar olarak verilmiştir.",
+    },
+    {
+      id: "social-hamidiye",
+      left: "Hamidiye Etfal",
+      right: "Çocuk hastanesi",
+      explanation: "Hamidiye Etfal çocuk hastanesidir; notta ilk çocuk hastanesini II. Abdülhamit'in açtırdığı belirtilir.",
+    },
+    {
+      id: "social-donanma",
+      left: "Donanma Cemiyeti",
+      right: "Halktan yardım alarak Osmanlı donanmasını güçlendirmek",
+      explanation: "Donanma Cemiyeti halktan yardım elde edip Osmanlı donanmasını güçlendirmek amacıyla kurulmuştur.",
+    },
+    {
+      id: "social-hilal",
+      left: "Hilal-i Ahmer",
+      right: "Günümüzde Kızılay",
+      explanation: "Hilal-i Ahmer günümüzde Kızılay olarak faaliyet göstermektedir.",
+    },
+    {
+      id: "social-himaye",
+      left: "Himaye-i Etfal",
+      right: "Çocuk Esirgeme Kurumu",
+      explanation: "Himaye-i Etfal notta Çocuk Esirgeme Kurumu olarak verilmiştir.",
+    },
+  ],
+};
+
+const administratorGroupsActivity: ClassificationActivity = {
+  id: "activity-administrator-groups",
+  chapterId: "administrator-groups",
+  mode: "classification",
+  title: "Yönetici Grupları Sınıflandırma Oyunu",
+  description: "Kişileri Seyfiye, İlmiye veya Kalemiye grubuna yerleştir.",
+  categories: [
+    {
+      id: "seyfiye",
+      title: "Seyfiye",
+      description: "Askeri ve yönetim işleri.",
+    },
+    {
+      id: "ilmiye",
+      title: "İlmiye",
+      description: "Din, hukuk ve eğitim işleri.",
+    },
+    {
+      id: "kalemiye",
+      title: "Kalemiye",
+      description: "Yazışma, maliye ve diplomasi işleri.",
+    },
+  ],
+  items: [
+    ...["Veziriazam", "Vezirler", "Yeniçeri Ağası", "Kaptanderya", "Beylerbeyi", "Sancakbeyi", "Subaşı", "Tımarlı Sipahi"].map(
+      (label) => ({
+        id: `admin-seyfiye-${slug(label)}`,
+        label,
+        categoryId: "seyfiye",
+        explanation: `${label}, notta Seyfiye grubu içinde verilmiştir.`,
+      }),
+    ),
+    ...["Şeyhülislam", "Kadı", "Nakibül Eşraf", "Kazasker", "Müderris", "Müftü"].map((label) => ({
+      id: `admin-ilmiye-${slug(label)}`,
+      label,
+      categoryId: "ilmiye",
+      explanation: `${label}, notta İlmiye grubu içinde verilmiştir.`,
+    })),
+    ...["Nişancı", "Defterdar", "Reisülküttab"].map((label) => ({
+      id: `admin-kalemiye-${slug(label)}`,
+      label,
+      categoryId: "kalemiye",
+      explanation: `${label}, notta Kalemiye grubu içinde verilmiştir.`,
+    })),
+  ],
+};
+
+const lawSocialTrapsActivity: TrueFalseActivity = {
+  id: "activity-law-social-traps",
+  chapterId: "law-social-traps",
+  mode: "truefalse",
+  title: "Doğru / Yanlış: Hukuk ve Sosyal Hayat KPSS Tuzakları",
+  description: "Hukuk, mahkeme, vakıf, sosyal kurum ve yönetici sınıf tuzaklarını çöz.",
+  questions: [
+    {
+      id: "law-trap-sources",
+      statement: "Osmanlı hukuk sisteminde İslam esasları, Orta Asya Türk gelenekleri ve fethedilen bölgelerdeki uygulamalar etkili olmuştur.",
+      answer: true,
+      explanation: "Notta bu üç unsur Osmanlı hukuk sisteminin oluşmasında etkili olan kaynaklar olarak verilmiştir.",
+    },
+    {
+      id: "law-trap-post-seri",
+      statement: "Tanzimat sonrası şeri mahkemelerin görevleri nikah, boşanma ve miras gibi konularla sınırlandırılmıştır.",
+      answer: true,
+      explanation: "Tanzimat sonrası şeri mahkemeler notta bu konularla sınırlandırılmıştır.",
+    },
+    {
+      id: "law-trap-commerce-murder",
+      statement: "Ticaret Mahkemeleri cinayet davalarına bakmıştır.",
+      answer: false,
+      explanation: "Ticaret Mahkemeleri her türlü ticari davaya bakmıştır; cinayet davaları Nizamiye Mahkemeleri bilgisinde geçer.",
+    },
+    {
+      id: "law-trap-nizamiye",
+      statement: "Nizamiye Mahkemeleri ticaret mahkemeleri dışında kalan hukuk ve cinayet davalarına bakmıştır.",
+      answer: true,
+      explanation: "Nizamiye Mahkemeleri notta bu şekilde tanımlanmıştır.",
+    },
+    {
+      id: "law-trap-qadi-only",
+      statement: "Kadılar sadece dini işlere bakmıştır.",
+      answer: false,
+      explanation: "Kadıların noterlik, nikah, yönetim, denetim, fiyat kontrolü ve gıda temini gibi görevleri vardır.",
+    },
+    {
+      id: "law-trap-equity",
+      statement: "Hakkaniyet Çemberi Adalet → Kanun → Ordu → Servet → Millet → Padişah şeklindedir.",
+      answer: true,
+      explanation: "Notta Hakkaniyet Çemberi bu sırayla verilmiştir.",
+    },
+    {
+      id: "law-trap-first-waqf",
+      statement: "İlk vakıf teşkilatını Orhan Bey kurmuştur.",
+      answer: true,
+      explanation: "Notta Osmanlı Devleti'nde ilk vakıf teşkilatını Orhan Bey'in kurduğu belirtilir.",
+    },
+    {
+      id: "law-trap-bedayi",
+      statement: "Darülbedayi konservatuvardır.",
+      answer: false,
+      explanation: "Darülbedayi tiyatrodur; Darülelhan konservatuvardır.",
+    },
+    {
+      id: "law-trap-elhan",
+      statement: "Darülelhan konservatuvardır.",
+      answer: true,
+      explanation: "Darülelhan notta konservatuvar olarak verilmiştir.",
+    },
+    {
+      id: "law-trap-hilal",
+      statement: "Hilal-i Ahmer günümüzde Kızılay olarak faaliyet göstermektedir.",
+      answer: true,
+      explanation: "Notta Hilal-i Ahmer'in günümüzde Kızılay olduğu belirtilir.",
+    },
+    {
+      id: "law-trap-seyfiye-ilmiye",
+      statement: "Seyfiye sınıfı din, hukuk ve eğitim işlerinden sorumludur.",
+      answer: false,
+      explanation: "Seyfiye askeri ve yönetim işleriyle; İlmiye din, hukuk ve eğitim işleriyle ilgilidir.",
+    },
+    {
+      id: "law-trap-ilmiye-ulema",
+      statement: "İlmiye sınıfı medreselerde yetişen ulema kişilerden oluşmuştur.",
+      answer: true,
+      explanation: "Notta İlmiye'nin medreselerde yetişen ulema denilen kişilerden oluştuğu yazılıdır.",
+    },
+    {
+      id: "law-trap-kalemiye",
+      statement: "Kalemiye yazışma, maliye ve dış işlerinden sorumludur.",
+      answer: true,
+      explanation: "Kalemiye notta devletin yazışma, mali ve dış işlerinden sorumlu olarak verilmiştir.",
+    },
+    {
+      id: "law-trap-beraya",
+      statement: "Beraya yönetici sınıftır.",
+      answer: true,
+      explanation: "Notta yönetici sınıfa Beraya denildiği belirtilir.",
+    },
+    {
+      id: "law-trap-reaya",
+      statement: "Reaya yönetilen sınıftır.",
+      answer: true,
+      explanation: "Notta yönetilen sınıfa Reaya denildiği belirtilir.",
+    },
+    {
+      id: "law-trap-darussafaka",
+      statement: "Darüşşafaka çocuk yurdudur.",
+      answer: true,
+      explanation: "Darüşşafaka notta çocuk yurdu olarak verilmiştir.",
+    },
+    {
+      id: "law-trap-daruleytam",
+      statement: "Darüleytam yetimler yurdudur.",
+      answer: true,
+      explanation: "Darüleytam notta yetimler yurdu olarak verilmiştir.",
+    },
+    {
+      id: "law-trap-avariz",
+      statement: "Avarız Vakıfları olağan vakıftır.",
+      answer: false,
+      explanation: "Notta Avarız Vakıfları olağanüstü vakıf olarak verilmiştir.",
+    },
+  ],
+};
+
 export const activities: Record<PlayableChapterId, Activity> = {
   foundations: foundationsActivity,
   succession: successionActivity,
@@ -936,6 +1623,15 @@ export const activities: Record<PlayableChapterId, Activity> = {
   divan: divanActivity,
   provincial: provincialActivity,
   "province-system": provinceSystemActivity,
+  "law-system": lawSystemActivity,
+  courts: courtsActivity,
+  "qadi-duties": qadiDutiesActivity,
+  "millet-system": milletSystemActivity,
+  "equity-circle": equityCircleActivity,
+  waqf: waqfActivity,
+  "social-institutions": socialInstitutionsActivity,
+  "administrator-groups": administratorGroupsActivity,
+  "law-social-traps": lawSocialTrapsActivity,
   traps: trapsActivity,
 };
 
@@ -945,6 +1641,13 @@ export const badges = [
   "Taşra Uzmanı",
   "Veraset Bilgesi",
   "KPSS Tuzak Avcısı",
+  "Kadı Adayı",
+  "Mahkeme Uzmanı",
+  "Hakkaniyet Bilgesi",
+  "Vakıf Kurucusu",
+  "Sosyal Kurum Hafızı",
+  "Seyfiye-İlmiye-Kalemiye Ustası",
+  "Hukuk ve Sosyal Hayat Uzmanı",
 ] as const;
 
 export function stableShuffle<T>(items: T[], seed: string): T[] {

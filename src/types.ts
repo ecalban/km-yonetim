@@ -3,7 +3,14 @@ export type BadgeName =
   | "Saray Rehberi"
   | "Taşra Uzmanı"
   | "Veraset Bilgesi"
-  | "KPSS Tuzak Avcısı";
+  | "KPSS Tuzak Avcısı"
+  | "Kadı Adayı"
+  | "Mahkeme Uzmanı"
+  | "Hakkaniyet Bilgesi"
+  | "Vakıf Kurucusu"
+  | "Sosyal Kurum Hafızı"
+  | "Seyfiye-İlmiye-Kalemiye Ustası"
+  | "Hukuk ve Sosyal Hayat Uzmanı";
 
 export type ChapterId =
   | "foundations"
@@ -15,6 +22,15 @@ export type ChapterId =
   | "provincial"
   | "province-system"
   | "traps"
+  | "law-system"
+  | "courts"
+  | "qadi-duties"
+  | "millet-system"
+  | "equity-circle"
+  | "waqf"
+  | "social-institutions"
+  | "administrator-groups"
+  | "law-social-traps"
   | "mistakes";
 
 export type PlayableChapterId = Exclude<ChapterId, "mistakes">;
