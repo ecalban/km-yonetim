@@ -11,6 +11,7 @@ React + Vite + TypeScript ile hazırlanmış, tamamen tarayıcıda çalışan KP
 - Osmanlı ordusu, Kapıkulu/Eyalet askerleri ve Deniz Kuvvetleri
 - Mülk, miri, vakıf arazi; Çifthane ve Dirlik sistemi
 - Eğitim sistemi, medreseler, ihtisas medreseleri ve bilim insanları
+- Ekonomi, vergiler, para-bankalar, mimari, sanat, edebiyat ve spor
 - KPSS tuzakları ve yanlış yapılan soruları tekrar ettiren Yanlışlarım modu
 
 ## Kurulum

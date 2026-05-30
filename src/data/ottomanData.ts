@@ -20,6 +20,11 @@ import {
   educationScienceBadges,
   educationScienceChapters,
 } from "./educationScienceData";
+import {
+  economyArtCultureActivities,
+  economyArtCultureBadges,
+  economyArtCultureChapters,
+} from "./economyArtCultureData";
 
 export const chapterDefinitions: ChapterDefinition[] = [
   {
@@ -160,6 +165,7 @@ export const chapterDefinitions: ChapterDefinition[] = [
   },
   ...militaryLandChapters,
   ...educationScienceChapters,
+  ...economyArtCultureChapters,
   {
     id: "traps",
     title: "KPSS Tuzakları",
@@ -1646,6 +1652,7 @@ export const activities: Record<PlayableChapterId, Activity> = {
   "law-social-traps": lawSocialTrapsActivity,
   ...militaryLandActivities,
   ...educationScienceActivities,
+  ...economyArtCultureActivities,
   traps: trapsActivity,
 };
 
@@ -1664,6 +1671,7 @@ export const badges = [
   "Hukuk ve Sosyal Hayat Uzmanı",
   ...militaryLandBadges,
   ...educationScienceBadges,
+  ...economyArtCultureBadges,
 ] as const;
 
 export function stableShuffle<T>(items: T[], seed: string): T[] {

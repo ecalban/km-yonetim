@@ -26,7 +26,15 @@ export type BadgeName =
   | "Akademik Basamak Ustası"
   | "Bilim İnsanları Hafızı"
   | "Eser Avcısı"
-  | "Eğitim ve Bilim KPSS Uzmanı";
+  | "Eğitim ve Bilim KPSS Uzmanı"
+  | "Çarşı Uzmanı"
+  | "Vergi Katibi"
+  | "Para ve Banka Hafızı"
+  | "Mimar Sinan Talebesi"
+  | "Sanat Hafızı"
+  | "Edebiyat Ustası"
+  | "Kemankeş"
+  | "Kalan Konular KPSS Avcısı";
 
 export type ChapterId =
   | "foundations"
@@ -67,6 +75,15 @@ export type ChapterId =
   | "academic-career"
   | "scientists"
   | "education-science-traps"
+  | "economy-concepts"
+  | "taxes"
+  | "money-banks"
+  | "economy-decline"
+  | "architecture"
+  | "arts"
+  | "language-literature"
+  | "sports"
+  | "remaining-traps"
   | "mistakes";
 
 export type PlayableChapterId = Exclude<ChapterId, "mistakes">;
